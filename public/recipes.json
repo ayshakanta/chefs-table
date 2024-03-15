@@ -1,0 +1,57 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Chicken Stir Fry",
+      "recipe_image": "https://i.ibb.co/bQ11XBN/chicken.jpg",
+      "short_description": "A quick and delicious chicken stir fry packed with flavor.",
+      "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g basil leaf", "400 g mushroom"],
+      "preparing_time": "30",
+      "calories": 320
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Vegetable Curry",
+      "recipe_image": "https://i.ibb.co/P14BY6w/vegetable.jpg",
+      "short_description": "A hearty and nutritious vegetable curry with aromatic spices.",
+      "ingredients": ["500 g mixed vegetables", "250 ml coconut milk", "100 g curry paste", "1 onion"],
+      "preparing_time": "45",
+      "calories": 250
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Spaghetti Carbonara",
+      "recipe_image": "https://i.ibb.co/4pJncSR/spaghetti.jpg",
+      "short_description": "Classic spaghetti carbonara made with crispy bacon and creamy sauce.",
+      "ingredients": ["400 g spaghetti", "150 g bacon", "3 eggs", "50 g grated Parmesan cheese"],
+      "preparing_time": "25",
+      "calories": 450
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Greek Salad",
+      "recipe_image": "https://i.ibb.co/mhVTG0n/salad.jpg",
+      "short_description": "A refreshing and healthy Greek salad with feta cheese and olives.",
+      "ingredients": ["200 g feta cheese", "150 g cherry tomatoes", "1 cucumber", "100 g olives"],
+      "preparing_time": "15",
+      "calories": 180
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Chocolate Chip Cookies",
+      "recipe_image": "https://i.ibb.co/pfFs3St/cookies.jpg",
+      "short_description": "Soft and chewy chocolate chip cookies that are perfect for dessert.",
+      "ingredients": ["200 g butter", "150 g brown sugar", "200 g chocolate chips", "250 g all-purpose flour"],
+      "preparing_time": "20",
+      "calories": 200
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Tomato Basil Pasta",
+      "recipe_image": "https://i.ibb.co/vhJR0pG/pasta.jpg",
+      "short_description": "Simple yet flavorful tomato basil pasta topped with Parmesan cheese.",
+      "ingredients": ["300 g pasta", "400 g cherry tomatoes", "100 g fresh basil", "50 g grated Parmesan cheese"],
+      "preparing_time": "35",
+      "calories": 300
+    }
+  ]
+  
