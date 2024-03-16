@@ -1,9 +1,16 @@
+
+
 import PropTypes from 'prop-types';
 import time from '../../assets/images/time.png'
 import calorie from '../../assets/images/calories.png'
+import { ToastContainer } from 'react-toastify';
 
-const Recipe = ({recipe, handleToWantCook}) => {
-    const {recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = recipe
+
+
+const Recipe = ({ recipe, handleToWantCook }) => {
+    const { recipe_name, recipe_image, short_description, ingredients, preparing_time, calories } = recipe
+
+
     return (
         <div>
             <img src={recipe_image} alt="" />
@@ -27,11 +34,16 @@ const Recipe = ({recipe, handleToWantCook}) => {
                     <p>{calories} calories</p>
                 </div>
             </div>
+            <div>
+                <button onClick={() =>
+                   handleToWantCook(recipe)
+                }>Want to Cook</button>
+                <ToastContainer></ToastContainer>
 
-            <button onClick={() => handleToWantCook(recipe)}>Want to Cook</button>
+            </div>
 
-            
-        </div>
+
+        </div >
     );
 };
 
