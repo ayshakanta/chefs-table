@@ -1,13 +1,14 @@
-// import Making from "../Making/Making";
+
 import PropTypes from 'prop-types';
+import Making from '../Making/Making';
 
 
-const CurrentlyCooking = ({totalCalories , totalTime  }) => {
+const CurrentlyCooking = ({totalCalories , totalTime, currentlyCooking  }) => {
 
 
     return (
         <div>
-            <h1 className='font-semibold text-2xl p-4 items-center text-center'>Currently Cooking: {0} </h1>
+            <h1 className='font-semibold text-2xl p-3 items-center text-center'>Currently Cooking: {currentlyCooking.length} </h1>
             <table className="table">
                 {/* head */}
                 <thead>
@@ -20,12 +21,10 @@ const CurrentlyCooking = ({totalCalories , totalTime  }) => {
                 </thead>
                 <tbody>
                     {
-                        // cooks.map(cook => <Making
-                        //     key={cook.recipe_id}
-                        //     handlePreparingButton = {handlePreparingButton}
-                        // cook = {cook}
-                        // ></Making>) 
-                       
+                       currentlyCooking.map(making => <Making
+                       key={making.recipe_id}
+                       making = {making}
+                       ></Making>)
                     }
                 </tbody>
             </table>
@@ -43,7 +42,8 @@ const CurrentlyCooking = ({totalCalories , totalTime  }) => {
 
 CurrentlyCooking.propTypes = {
     totalCalories: PropTypes.number,
-    totalTime: PropTypes.number
+    totalTime: PropTypes.number,
+    currentlyCooking: PropTypes.array
 
 }
 

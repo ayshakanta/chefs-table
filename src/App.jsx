@@ -20,7 +20,7 @@ function App() {
 
   const [totalCalories, setTotalCalories] = useState(0);
 
-  // const [currentlyCooking, setCurrentlyCooking] = useState([])
+  const [currentlyCooking, setCurrentlyCooking] = useState([])
 
   
 
@@ -44,8 +44,10 @@ function App() {
     const remainingRecipe = cooks.filter(cook => cook.recipe_id !== id)
     setCooks(remainingRecipe)
 
+    const preparing = currentlyCooking.filter(making => making.id === remainingRecipe.recipe_id)
+    setCurrentlyCooking([...currentlyCooking, preparing])
     
-    
+   
 
   }
 
@@ -63,10 +65,10 @@ function App() {
             <p className='text-[#150B2B99]'>Our recipes offer a delightful journey through diverse culinary experiences, each dish <br /> carefully crafted to tantalize taste buds and ignite culinary passion. From comforting classics to innovative creations, <br /> our collection showcases a symphony of flavors, textures, and aromas.</p>
           </div>
           <div className='md:flex gap-6'>
-            <div className='w-2/3'>
+            <div className='mb-6'>
               <Recipes handleToWantCook={handleToWantCook}></Recipes>
             </div>
-            <div className=' border-2 p-2 rounded-2xl'>
+            <div className=' border-2 p-2 rounded-2xl mb-6'>
               <Cooks handlePreparingButton= {handlePreparingButton}
               totalTime = {totalTime}
               totalCalories = {totalCalories}
@@ -78,6 +80,7 @@ function App() {
               handlePreparingButton= {handlePreparingButton}
               totalTime = {totalTime}
               totalCalories = {totalCalories}
+              currentlyCooking = {currentlyCooking}
               
               ></CurrentlyCooking>
             </div>
