@@ -20,6 +20,8 @@ function App() {
 
   const [totalCalories, setTotalCalories] = useState(0);
 
+  // const [currentlyCooking, setCurrentlyCooking] = useState([])
+
   
 
 
@@ -42,9 +44,7 @@ function App() {
     const remainingRecipe = cooks.filter(cook => cook.recipe_id !== id)
     setCooks(remainingRecipe)
 
-    const remainPreparing = cooks.filter(cook => cook.recipe_id === id)
-    console.log(remainPreparing)
-
+    
     
 
   }
@@ -66,17 +66,19 @@ function App() {
             <div className='w-2/3'>
               <Recipes handleToWantCook={handleToWantCook}></Recipes>
             </div>
-            <div className='md:w-1/3 border-2 p-2 rounded-2xl'>
+            <div className=' border-2 p-2 rounded-2xl'>
               <Cooks handlePreparingButton= {handlePreparingButton}
               totalTime = {totalTime}
               totalCalories = {totalCalories}
 
                cooks={cooks}></Cooks>
               <CurrentlyCooking
-              // cooking = {cooking}
+              
+              
               handlePreparingButton= {handlePreparingButton}
               totalTime = {totalTime}
               totalCalories = {totalCalories}
+              
               ></CurrentlyCooking>
             </div>
           </div>

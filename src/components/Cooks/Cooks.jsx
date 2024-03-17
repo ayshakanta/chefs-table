@@ -3,7 +3,7 @@ import Cook from '../Cook/Cook';
 
 const Cooks = ({ cooks, handlePreparingButton , totalCalories , totalTime}) => {
     return (
-        <div className="mb-10 w-96">
+        <div className="mb-10 ">
             <h1 className='font-semibold text-2xl p-4 items-center text-center'>Want to cook: {cooks.length} </h1>
             <hr />
             <table className="table">

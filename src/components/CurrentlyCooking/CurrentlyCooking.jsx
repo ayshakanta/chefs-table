@@ -1,8 +1,8 @@
-import Making from "../Making/Making";
+// import Making from "../Making/Making";
 import PropTypes from 'prop-types';
 
 
-const CurrentlyCooking = ({totalCalories , totalTime }) => {
+const CurrentlyCooking = ({totalCalories , totalTime  }) => {
 
 
     return (
@@ -20,7 +20,12 @@ const CurrentlyCooking = ({totalCalories , totalTime }) => {
                 </thead>
                 <tbody>
                     {
-                        <Making></Making>
+                        // cooks.map(cook => <Making
+                        //     key={cook.recipe_id}
+                        //     handlePreparingButton = {handlePreparingButton}
+                        // cook = {cook}
+                        // ></Making>) 
+                       
                     }
                 </tbody>
             </table>
