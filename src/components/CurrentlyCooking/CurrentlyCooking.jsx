@@ -1,10 +1,13 @@
 import Making from "../Making/Making";
+import PropTypes from 'prop-types';
 
 
+const CurrentlyCooking = ({totalCalories , totalTime }) => {
 
-const CurrentlyCooking = ({totalCalories , totalTime}) => {
+
     return (
         <div>
+            <h1 className='font-semibold text-2xl p-4 items-center text-center'>Currently Cooking: {0} </h1>
             <table className="table">
                 {/* head */}
                 <thead>
@@ -16,17 +19,27 @@ const CurrentlyCooking = ({totalCalories , totalTime}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <Making></Making>
+                    {
+                        <Making></Making>
+                    }
                 </tbody>
             </table>
 
-            <div>
-                <p>Total Time= <span>{totalTime} minutes</span></p>
-                <p>Total Calories= <span>{totalCalories} calories</span></p>
+            <div className=" p-4 flex gap-5"> 
+                <p>Total Time= 
+                    <br /><span>{totalTime} minutes</span></p>
+                <p>Total Calories= 
+                    <br /><span>{totalCalories} calories</span></p>
             </div>
             
         </div>
     );
 };
+
+CurrentlyCooking.propTypes = {
+    totalCalories: PropTypes.number,
+    totalTime: PropTypes.number
+
+}
 
 export default CurrentlyCooking;

@@ -2,14 +2,15 @@
 
 const Banner = () => {
     return (
-        <div>
-            <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/gjMdbS8/banner.jpg)'}}>
-                <div className="hero-overlay bg-opacity-60"></div>
+        <div className="mb-20" >
+            <div className="hero min-h-screen rounded-3xl" style={{backgroundImage: 'url(https://i.ibb.co/gjMdbS8/banner.jpg)'}}>
+                <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
                 <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                    <div className="text-white space-y-10 ">
+                        <h1 className="mb-5 text-5xl font-bold">Discover an exceptional cooking <br />class tailored for you!</h1>
+                        <p className="mb-5 font-normal ">These classes provide an invaluable opportunity for participants to sharpen their culinary skills,<br /> regardless of their level of expertise, from novice to seasoned home cooks.</p>
+                        <button className="btn bg-[#0BE58A] rounded-full text-black border-none mr-5">Explore Now</button>
+                        <button className="btn bg-transparent text-white rounded-full">Our Feedback</button>
                     </div>
                 </div>
             </div>

@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 const Cook = ({ cook, handlePreparingButton}) => {
     const {recipe_id, recipe_name, preparing_time, calories } = cook
     return (
-        <tr>
+        <tr className='w-96'>
+
             {/* row */}
             <td>{recipe_id}</td>
             <td>{recipe_name}</td>
             <td>{preparing_time} minutes</td>
             <td>{calories} calories</td>
-            <td><button onClick={() =>handlePreparingButton(preparing_time, calories)}>Preparing</button></td>
+            <td><button
+            className='bg-[#0BE58A] font-medium px-3 py-2 rounded-full' 
+            onClick={() =>handlePreparingButton( preparing_time, calories, recipe_id)}
+            >Preparing</button></td>
         </tr>
 
 

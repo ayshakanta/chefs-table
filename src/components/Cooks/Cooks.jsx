@@ -3,8 +3,8 @@ import Cook from '../Cook/Cook';
 
 const Cooks = ({ cooks, handlePreparingButton , totalCalories , totalTime}) => {
     return (
-        <div className="">
-            <h1>Want to cook: {cooks.length} </h1>
+        <div className="mb-10 w-96">
+            <h1 className='font-semibold text-2xl p-4 items-center text-center'>Want to cook: {cooks.length} </h1>
             <hr />
             <table className="table">
                 <thead>
@@ -17,6 +17,7 @@ const Cooks = ({ cooks, handlePreparingButton , totalCalories , totalTime}) => {
                     </tr>
                 </thead>
                 <tbody>
+                    
                     {
                         cooks.map(cook => <Cook
                             key={cook.recipe_id}
@@ -26,6 +27,7 @@ const Cooks = ({ cooks, handlePreparingButton , totalCalories , totalTime}) => {
                             totalCalories = {totalCalories}
                         ></Cook>)
                     }
+                   
                 </tbody>
             </table>
         </div>
@@ -35,6 +37,8 @@ const Cooks = ({ cooks, handlePreparingButton , totalCalories , totalTime}) => {
 
 Cooks.propTypes = {
     cooks: PropTypes.any.isRequired,
-    handlePreparingButton: PropTypes.func.isRequired
+    handlePreparingButton: PropTypes.func.isRequired,
+    totalCalories: PropTypes.number,
+    totalTime: PropTypes.number
 }
 export default Cooks;
