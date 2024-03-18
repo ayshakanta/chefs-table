@@ -1,20 +1,20 @@
 import { useEffect } from "react";
-import { useState } from "react";
+
 import Recipe from "../Recipe/Recipe";
 
 import PropTypes from 'prop-types';
 
 
-const Recipes = ({handleToWantCook}) => {
+const Recipes = ({handleToWantCook, recipes, setRecipes}) => {
 
-    const [recipes, setRecipes] = useState([]);
+    
 
     useEffect(() => {
         fetch('recipes.json')
             .then(res => res.json())
             .then(data => setRecipes(data))
 
-    }, [])
+    }, [setRecipes])
     return (
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-6">
             {
@@ -29,7 +29,9 @@ const Recipes = ({handleToWantCook}) => {
 };
 
 Recipes.propTypes ={
-    handleToWantCook: PropTypes.func.isRequired
+    handleToWantCook: PropTypes.func.isRequired,
+    recipes: PropTypes.any,
+    setRecipes: PropTypes.func
 }
 
 export default Recipes;

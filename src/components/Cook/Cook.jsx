@@ -12,7 +12,7 @@ const Cook = ({ cook, handlePreparingButton}) => {
             <td>{calories} calories</td>
             <td><button
             className='bg-[#0BE58A] font-medium px-3 py-2 rounded-full' 
-            onClick={() =>handlePreparingButton( preparing_time, calories, recipe_id, recipe_name)}
+            onClick={() =>handlePreparingButton(cook)}
             >Preparing</button></td>
         </tr>
 

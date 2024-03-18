@@ -13,6 +13,7 @@ import CurrentlyCooking from './components/CurrentlyCooking/CurrentlyCooking'
 
 
 function App() {
+  const [recipes, setRecipes] = useState([]);
 
   const [cooks, setCooks] = useState([]);
 
@@ -35,16 +36,19 @@ function App() {
     }
   }
 
+  console.log(currentlyCooking)
 
-  const handlePreparingButton = (time, calories, id) =>{
-    setTotalTime(totalTime + time)
+  const handlePreparingButton = ({preparing_time, calories, recipe_id}) =>{
+
+    console.log(preparing_time, calories, recipe_id)
+    setTotalTime(totalTime + preparing_time)
     setTotalCalories(totalCalories + calories)
 
 
-    const remainingRecipe = cooks.filter(cook => cook.recipe_id !== id)
+    const remainingRecipe = cooks.filter(cook => cook.recipe_id !== recipe_id)
     setCooks(remainingRecipe)
 
-    const preparing = currentlyCooking.filter(making => making.id === remainingRecipe.recipe_id)
+    const preparing = recipes.find(making => making.recipe_id === recipe_id)
     setCurrentlyCooking([...currentlyCooking, preparing])
     
    
@@ -66,9 +70,12 @@ function App() {
           </div>
           <div className='md:flex gap-6'>
             <div className='mb-6'>
-              <Recipes handleToWantCook={handleToWantCook}></Recipes>
+              <Recipes
+              recipes={recipes}
+              setRecipes={setRecipes}
+              handleToWantCook={handleToWantCook}></Recipes>
             </div>
-            <div className=' border-2 p-2 rounded-2xl mb-6'>
+            <div className=' border-2 p-2 rounded-2xl mb-6 h-2/3'>
               <Cooks handlePreparingButton= {handlePreparingButton}
               totalTime = {totalTime}
               totalCalories = {totalCalories}
